@@ -96,7 +96,7 @@ h6 {
 
 @font-face {
   font-family: 'Paddis';
-  src: url(".../font/Paddis_Handwritten.eot"),url(".../font/Paddis_Handwritten.woff2") format("woff2"), url(".../font/Paddis_Handwritten.woff") format("woff"), url(".../font/Paddis_Handwritten.ttf") format("truetype");
+  src: url("https://github.com/Polinkaaj/kulkova-site/blob/main/font/Paddis_Handwritten.eot"),url(".../font/Paddis_Handwritten.woff2") format("woff2"), url(".../font/Paddis_Handwritten.woff") format("woff"), url(".../font/Paddis_Handwritten.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
