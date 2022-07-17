@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $('a[href^="#"').on('click', function () {
 
@@ -59,3 +58,33 @@ function burgerMenu(selector) {
 }
 
 burgerMenu('.burger-menu');
+
+let step = 4; // Размер этих самых порций. Чтобы легко можно было поменять.
+let prod = document.querySelectorAll('.gallery');
+
+for (let i = 0; i < prod.length; i++) {
+    let product = prod[i];
+    let images = product.querySelectorAll('.minimized');
+    for (let j = 0; j < step; j++) {//Для начала перебираем - показываем первые step пунктов.
+        // Но только если такие существуют
+        if (images[j]) { images[j].classList.add('visi') }
+    }
+
+    let more = product.querySelector('.more');
+    more.addEventListener('click', function () {
+        let visi = product.querySelectorAll('.visi');
+        let next = visi[visi.length - 1].nextElementSibling;
+        // Достали следующий элемент ПОСЛЕДНЕГО элемента visi. 
+        //Предполагается, что никогда не будет добавлено полностью пустых ul.
+        let it = 0;
+        while (it < step) {
+            if (next) {
+                next.classList.add('visi');
+                next = next.nextElementSibling;
+                it++;
+            } else {
+                break; // Если следующего элемента не оказалось - выключаем цикл.
+            }
+        }
+    });
+}
