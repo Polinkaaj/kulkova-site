@@ -267,17 +267,23 @@ section {
   height: 40%;
   min-width: 425px;
   margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .first-screen img {
   width: 40%;
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 140px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -21;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -313,16 +319,6 @@ p {
   font-weight: 400;
 }
 
-h3 {
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 15px;
-  font-weight: 300;
-}
-
 h4 {
   font-family: 'Gilroy';
   font-style: normal;
@@ -336,15 +332,6 @@ h4 {
   padding-top: 70px;
 }
 
-.gallery {
-  margin-top: 40px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
 .gallery .minimized {
   width: 200px;
   -webkit-transition: width 0.5s ease;
@@ -354,7 +341,7 @@ h4 {
 #magnify {
   display: none;
   position: fixed;
-  max-width: 600px;
+  max-width: 480px;
   height: auto;
   z-index: 9999;
 }
@@ -598,8 +585,8 @@ i {
 #butterfly {
   position: absolute;
   width: 70px;
-  left: 75px;
-  top: 48px;
+  left: 20px;
+  top: 15px;
   z-index: 8;
   animation: movement 10s ease-in-out 1s 1 normal;
   -webkit-animation: movement 10s ease-in-out 1s 1 normal;
@@ -607,8 +594,8 @@ i {
 
 @-webkit-keyframes movement {
   0% {
-    left: 75px;
-    top: 48px;
+    left: 20px;
+    top: 15px;
   }
   20% {
     left: 300px;
@@ -643,8 +630,8 @@ i {
 
 @keyframes movement {
   0% {
-    left: 75px;
-    top: 48px;
+    left: 20px;
+    top: 15px;
   }
   20% {
     left: 300px;
@@ -730,4 +717,38 @@ i {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.gallery {
+  margin-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery img {
+  display: none;
+}
+
+.gallery .visi {
+  display: block;
+}
+
+.more {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #5b3e1b;
+  color: #5b3e1b;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 25px;
+  text-align: left;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  cursor: pointer;
 }
