@@ -533,3 +533,10 @@ i {
     margin-top: 20px;
     cursor: pointer;
 }
+
+ol {
+    margin-top: 20px;
+    margin-left: 40px;
+    @include font-gilroy(24px, 25px);
+    padding: 7px;
+}
