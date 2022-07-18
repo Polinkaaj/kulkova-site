@@ -752,3 +752,14 @@ i {
   margin-top: 20px;
   cursor: pointer;
 }
+
+ol {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 25px;
+  padding: 7px;
+}
